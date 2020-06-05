@@ -607,14 +607,6 @@ gc.collect()
 param_grid = {'max_depth' : [7, 6], 'min_child_weight' : [2, 3, 4]}
 
 
-#‘subsample’ : 1.0              Ποσοστό δεδομένων σε κάθε δέντρο
-#‘colsample_bytree’ : 1.0       Ποσοστό μεταβλητών σε κάθε δέντρο
-#‘lambda’ : 1.0                 l2 regularization στα leaf weights
-#‘gamma’ : 0.0                  ελάχιστο απαιτούμενο loss reduction για να γίνει ένα split
-
-#‘eta’ : 0.3                    Ρυθμός μάθησης. Όσο μικρότερο, τόσο περισσότερα δέντρα χρειάζονται
-#https://xgboost.readthedocs.io/en/latest/parameter.html
-
 
 xg = xgb.XGBClassifier(learning_rate =0.1,
                        n_estimators=140,
