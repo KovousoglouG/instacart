@@ -606,7 +606,7 @@ gc.collect()
 
 param_grid = {'max_depth' : [7, 6], 'min_child_weight' : [2, 3, 4]}
 
-#‘max_depth’ : 6                Μέγιστο βάθος ενός δέντρου
+
 #‘subsample’ : 1.0              Ποσοστό δεδομένων σε κάθε δέντρο
 #‘colsample_bytree’ : 1.0       Ποσοστό μεταβλητών σε κάθε δέντρο
 #‘lambda’ : 1.0                 l2 regularization στα leaf weights
