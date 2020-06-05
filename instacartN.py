@@ -612,15 +612,17 @@ gc.collect()
 # 'The best params are: ', {'max_depth': 9})
 # ('The achieved score with these params is: ', 0.9105845059761093)
 
-param_grid = {'max_depth' : [7, 8, 9]}
+param_grid = {'gamma' = [0.1, 0.2, 0.3], 'lambda' = [0.8, 0.9, 1] }
 
 
 
 xg = xgb.XGBClassifier(learning_rate =0.1,
                        n_estimators=140,
-                       max_depth=5,
-                       min_child_weight=1,
+                       max_depth=9,
+                       min_child_weight=3,
                        gamma=0, 
+                       lambda=0
+                       alpha=0
                        subsample=0.8,
                        colsample_bytree=0.8,
                        objective= 'binary:logistic',
