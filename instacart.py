@@ -843,9 +843,12 @@ gc.collect()
 # ## 4.1. Tune model with Grid Search
 
 # In[ ]:
+# {'max_depth' : [7, 8], 'min_child_weight' : [2, 1]}   
+#('The best params are: ', {'max_depth': 7, 'min_child_weight': 2})
+#('The achieved score with these params is: ', 0.9087080789058191)
 
 
-param_grid = {'max_depth' : [7, 8], 'min_child_weight' : [2, 1]}
+param_grid = {'max_depth' : [7, 6], 'min_child_weight' : [2, 3, 4]}
 
 #‘max_depth’ : 6                Μέγιστο βάθος ενός δέντρου
 #‘subsample’ : 1.0              Ποσοστό δεδομένων σε κάθε δέντρο
