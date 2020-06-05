@@ -608,6 +608,10 @@ gc.collect()
 #('The best params are: ', {'max_depth': 7, 'min_child_weight': 3})
 #('The achieved score with these params is: ', 0.9105473363477312)
 
+# {'max_depth' : [7, 8, 9]}
+# 'The best params are: ', {'max_depth': 9})
+# ('The achieved score with these params is: ', 0.9105845059761093)
+
 param_grid = {'max_depth' : [7, 8, 9]}
 
 
