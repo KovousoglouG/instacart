@@ -612,7 +612,7 @@ gc.collect()
 # 'The best params are: ', {'max_depth': 9})
 # ('The achieved score with these params is: ', 0.9105845059761093)
 
-param_grid = {'gamma' = [0.1, 0.2, 0.3], 'lambda' = [0.8, 0.9, 1] }
+param_grid = {'gamma' : [0.1, 0.2, 0.3], 'lambda' : [0.8, 0.9, 1] }
 
 
 
