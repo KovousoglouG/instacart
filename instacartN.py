@@ -640,16 +640,15 @@ gc.collect()
 #('The achieved score with these params is: ', 0.9105948898722911)
 
 
-param_grid = 
- {'objective' : 'binary:logistic',
-         'tree_method' : 'gpu_hist',
-          'eval_metric' : 'logloss',
-          'subsample': 0.8,
-          'colsample_bytree': 0.7,
-          'max_depth': 9,
-          'min_child_weight' : 3,
-         'gamma': 0.3,
-         'lambda': 1}
+param_grid =  {'objective' : 'binary:logistic',
+                 'tree_method' : 'gpu_hist',
+            'eval_metric' : 'logloss',
+            'subsample': 0.8,
+            'colsample_bytree': 0.7,
+            'max_depth': 9,
+            'min_child_weight' : 3,
+            'gamma': 0.3,
+            'lambda': 1}
 
 xg = xgb.XGBClassifier({'learning_rate' : [0.1, 0.01], 'n_estimators' : [ 1000, 5000]},
                        # n_estimators= 5000,
