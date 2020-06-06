@@ -635,7 +635,7 @@ gc.collect()
 
 
 
-param_grid = {'learning_rate' : [0.1, 0.01, 0.001], 'n_estimators' : [300, 3000, 8000, 20000]}
+param_grid = {'learning_rate' : [0.1, 0.01, 0.001, 0.0001], 'n_estimators' : [100, 200, 300, 500]}
 
 xg = xgb.XGBClassifier(
     
