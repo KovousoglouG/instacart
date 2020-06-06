@@ -604,6 +604,7 @@ gc.collect()
 
 ## 4.1. Tune model with Grid Search
 
+# learning_rate = 0.1 n_estimators = 140
 #{'max_depth' : [7, 6], 'min_child_weight' : [2, 3, 4]}
 #('The best params are: ', {'max_depth': 7, 'min_child_weight': 3})
 #('The achieved score with these params is: ', 0.9105473363477312)
@@ -630,10 +631,14 @@ gc.collect()
 #('The best params are: ', {'subsample': 0.8, 'colsample_bytree': 0.7})
 #('The achieved score with these params is: ', 0.9106162476587559)
 
-param_grid = {'learning_rate' : [0.1, 0.01, 0.001, 0.0001], 'n_estimators' : [300, 3000, 30000, 300000]}
+# {'learning_rate' : [0.1, 0.01, 0.001, 0.0001], 'n_estimators' : [300, 3000, 30000, 300000]}
 
-xg = xgb.XGBClassifier( 
-                        
+
+
+param_grid = {'learning_rate' : [0.1, 0.01, 0.001], 'n_estimators' : [300, 3000, 8000, 20000]}
+
+xg = xgb.XGBClassifier(
+    
                         gamma=0.3 ,
                       min_child_weight=3,
                      subsample=0.8,
