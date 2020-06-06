@@ -732,7 +732,7 @@ final.head()
 d = dict()
 for row in final.itertuples():
     if row.prediction== 1:
-       try:
+        try:
             d[row.order_id] += ' ' + str(row.product_id)
         except:
             d[row.order_id] = str(row.product_id)
