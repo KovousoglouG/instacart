@@ -631,11 +631,13 @@ gc.collect()
 #('The best params are: ', {'subsample': 0.8, 'colsample_bytree': 0.7})
 #('The achieved score with these params is: ', 0.9106162476587559)
 
-# {'learning_rate' : [0.1, 0.01, 0.001, 0.0001], 'n_estimators' : [300, 3000, 30000, 300000]}
+# {'learning_rate' :[0.1, 0.01, 0.001, 0.0001], 'n_estimators' : [100, 200, 300, 500]}
+#'The best params are: ', {'n_estimators': 500, 'learning_rate': 0.1})
+#('The achieved score with these params is: ', 0.910288210938467)
 
 
 
-param_grid = {'learning_rate' : [0.1, 0.01, 0.001, 0.0001], 'n_estimators' : [100, 200, 300, 500]}
+param_grid = {'learning_rate' : [0.1, 0.01, 0.001, 0.0001], 'n_estimators' : [100, 500, 1000, 5000]}
 
 xg = xgb.XGBClassifier(
     
