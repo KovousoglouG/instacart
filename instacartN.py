@@ -665,6 +665,8 @@ dm_test = xgb.DMatrix(data = data_test)
 
 
 params = {'objective' : 'binary:logistic',
+          'learning_rate' : 0.01,
+           'n_estimators' : 5000,
           'tree_method' : 'gpu_hist',
           'eval_metric' : 'logloss',
           'subsample': 0.8,
