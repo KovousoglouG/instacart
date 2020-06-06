@@ -616,7 +616,16 @@ gc.collect()
 #'The best params are: ', {'gamma': 0.3, 'lambda': 1})
 #('The achieved score with these params is: ', 0.9105896979242002)
 
-param_grid = {'gamma' : [0.1, 0.2, 0.3], 'lambda' : [0.8, 0.9, 1] }
+# {'gamma' : [0.5, 0.4, 0.3], 'lambda' : [0.8, 0.9, 1] }
+#('The best params are: ', {'gamma': 0.1, 'lambda': 0.9})
+#('The achieved score with these params is: ', 0.9105918219029646)
+# ('The best params are: ', {'gamma': 0.2, 'lambda': 0.8})
+#('The achieved score with these params is: ', 0.9105989018321795)
+#('The best params are: ', {'gamma': 0.2, 'lambda': 1})
+#('The achieved score with these params is: ', 0.9105950078711113)
+
+
+param_grid = {'gamma' : [0.5, 0.4, 0.3, 0.2, 0.1], 'lambda' : [1] }
 
 
 
@@ -624,7 +633,7 @@ xg = xgb.XGBClassifier(learning_rate =0.1,
                        n_estimators=140,
                        max_depth=9,
                        min_child_weight=3,
-                       gamma=0,
+                       
                        subsample=0.8,
                        colsample_bytree=0.8,
                        objective= 'binary:logistic',
