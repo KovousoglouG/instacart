@@ -660,7 +660,7 @@ gc.collect()
 #('The achieved score with these params is: ', 0.9105948898722911)
 
 
-param_grid =  { 'reg_lambda':[0.8, 0.9, 1] }
+param_grid =  { 'reg_lambda':[0.93, 0.95, 0.98] }
     
 xg = xgb.XGBClassifier( learning_rate= 0.1,
                         n_estimators= 160,
