@@ -640,28 +640,22 @@ gc.collect()
 #('The achieved score with these params is: ', 0.9105948898722911)
 
 
-param_grid =  {'objective' : 'binary:logistic',
-                 'tree_method' : 'gpu_hist',
-            'eval_metric' : 'logloss',
-            'subsample': 0.8,
-            'colsample_bytree': 0.7,
-            'max_depth': 9,
-            'min_child_weight' : 3,
-            'gamma': 0.3,
-            'lambda': 1}
-
-xg = xgb.XGBClassifier({'learning_rate' : [0.1, 0.01], 'n_estimators' : [ 1000, 5000]},
-                       # n_estimators= 5000,
-                       # eval_metric= 'logloss',
-                       # subsample= 0.8,
-                       # min_child_weight= 3,
-                       # max_depth= 9,
-                      # gamma=0.3 ,
-                      # colsample_bytree=0.7,
-                      #  nthread=4,
-                       # scale_pos_weight=1,
+param_grid =  { 'subsample': [0.8] }
+    
+    
+xg = xgb.XGBClassifier( learning_rate= 0.1,
+                        n_estimators= 140,
+                        n_estimators= 5000,
+                        eval_metric= 'logloss',
+                        subsample= 0.8,
+                        min_child_weight= 3,
+                        max_depth= 9,
+                        gamma=0.3 ,
+                        colsample_bytree=0.7,
+                        nthread=4,
+                        scale_pos_weight=1,
                         seed=27, 
-                       tree_method = 'gpu_hist', 
+                        tree_method = 'gpu_hist', 
                         num_boost_round = 10)
 
 grid_search = GridSearchCV(estimator = xg, param_grid = param_grid, cv = 3, verbose = 2, n_jobs = 2)
