@@ -640,11 +640,10 @@ gc.collect()
 #('The achieved score with these params is: ', 0.9105948898722911)
 
 
-param_grid =  { 'subsample': [0.8] }
-    
+param_grid =  { 'reg_alpha':[1e-5, 1e-2, 0.1, 1, 100] }
     
 xg = xgb.XGBClassifier( learning_rate= 0.1,
-                        n_estimators= 1000,
+                        n_estimators= 160,
                         eval_metric= 'logloss',
                         subsample= 0.8,
                         min_child_weight= 3,
