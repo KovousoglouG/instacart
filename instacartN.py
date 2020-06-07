@@ -645,7 +645,6 @@ param_grid =  { 'subsample': [0.8] }
     
 xg = xgb.XGBClassifier( learning_rate= 0.1,
                         n_estimators= 140,
-                        n_estimators= 5000,
                         eval_metric= 'logloss',
                         subsample= 0.8,
                         min_child_weight= 3,
