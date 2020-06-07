@@ -635,6 +635,10 @@ gc.collect()
 #('The best params are: ', {'reg_alpha': 1})
 #('The achieved score with these params is: ', 0.9106130616906092)
 
+#  { 'reg_alpha':[0.1 ,0.5, 1, 3, 16] }
+# ('The best params are: ', {'reg_alpha': 16})
+#('The achieved score with these params is: ', 0.9106256875643758)
+
 # {'learning_rate' :[0.1, 0.01, 0.001, 0.0001], 'n_estimators' : [100, 200, 300, 500]}
 #'The best params are: ', {'n_estimators': 500, 'learning_rate': 0.1})
 #('The achieved score with these params is: ', 0.910288210938467)
@@ -644,7 +648,7 @@ gc.collect()
 #('The achieved score with these params is: ', 0.9105948898722911)
 
 
-param_grid =  { 'reg_alpha':[0.1 ,0.5, 1, 3, 16] }
+param_grid =  { 'reg_alpha':[8, 16, 35, 60, 90] }
     
 xg = xgb.XGBClassifier( learning_rate= 0.1,
                         n_estimators= 160,
