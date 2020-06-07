@@ -631,6 +631,10 @@ gc.collect()
 #('The best params are: ', {'subsample': 0.8, 'colsample_bytree': 0.7})
 #('The achieved score with these params is: ', 0.9106162476587559)
 
+#  'reg_alpha':[1e-5, 1e-2, 0.1, 1, 100] }
+#('The best params are: ', {'reg_alpha': 1})
+#('The achieved score with these params is: ', 0.9106130616906092)
+
 # {'learning_rate' :[0.1, 0.01, 0.001, 0.0001], 'n_estimators' : [100, 200, 300, 500]}
 #'The best params are: ', {'n_estimators': 500, 'learning_rate': 0.1})
 #('The achieved score with these params is: ', 0.910288210938467)
@@ -640,7 +644,7 @@ gc.collect()
 #('The achieved score with these params is: ', 0.9105948898722911)
 
 
-param_grid =  { 'reg_alpha':[1e-5, 1e-2, 0.1, 1, 100] }
+param_grid =  { 'reg_alpha':[0.1 ,0.5, 1, 3, 16] }
     
 xg = xgb.XGBClassifier( learning_rate= 0.1,
                         n_estimators= 160,
@@ -656,7 +660,7 @@ xg = xgb.XGBClassifier( learning_rate= 0.1,
                         tree_method = 'gpu_hist', 
                         num_boost_round = 10)
 
-grid_search = GridSearchCV(estimator = xg, param_grid = param_grid, cv = 3, verbose = 2, n_jobs = 2)
+grid_search = GridSearchCV(estimator = xg, param_grid = param_grid, cv = 4, verbose = 2, n_jobs = 2)
 
 
 xg.get_params()
